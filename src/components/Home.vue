@@ -32,7 +32,7 @@ const transactions = ref([]);
 const showForm = ref(false);
 
 const fetchTransactions = async () => {
-  const res = await axios.get("http://localhost:8000/api/transactions");
+  const res = await axios.get("https://self-financial-backend-production.up.railway.app/api/transactions");
   transactions.value = res.data;
 };
 

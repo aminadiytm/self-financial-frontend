@@ -94,7 +94,7 @@ const form = ref({
 });
 
 const submitForm = async () => {
-  await axios.post("http://localhost:8000/api/transactions", form.value);
+  await axios.post("https://self-financial-backend-production.up.railway.app/api/transactions", form.value);
   form.value = { tipe: "", tanggal: "", kategori: "", nominal: null, catatan: "" };
   emit("success");
 };
